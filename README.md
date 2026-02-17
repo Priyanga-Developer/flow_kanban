@@ -45,4 +45,76 @@ The application uses `useReducer` to manage task state. This provides:
 - Easy scalability for future features like drag-and-drop
 
 Reducer logic is located in:
+src/reducer/boardReducer.ts
+
+### Data Model
+
+Tasks follow a typed structure:
+id
+title
+description
+column
+
+Types are defined in:
+---
+
+### Component Structure
+src/components/
+
+Header.tsx → Application header
+Board.tsx → Main kanban layout
+Column.tsx → Individual kanban columns
+TaskCard.tsx → Task display card
+AddTask.tsx → Task creation form
+---
+
+### Utilities
+src/utils/storage.ts
+Handles saving and loading board state using localStorage.
+
+---
+
+## 💾 Data Persistence
+
+The application saves task state to `localStorage` so that:
+
+- Board state remains after page refresh
+- No backend/API required
+
+---
+
+## 🎨 UI Design Principles
+
+- Utility-first styling with Tailwind CSS
+- Responsive grid layout
+- Accessible form inputs
+- Consistent spacing and visual hierarchy
+
+---
+
+## 📦 Installation
+
+Clone repository:git clone <YOUR_REPO_LINK>
+Install dependencies:npm install
+Run development server:npm run dev
+---
+
+## 🚀 Deployment
+
+This project can be deployed using:
+
+- Vercel
+- Netlify
+- Any static hosting platform
+
+---
+
+## 🔮 Possible Future Improvements
+
+- Drag-and-drop support (dnd-kit / react-beautiful-dnd)
+- Task editing functionality
+- Animations for task transitions
+- Dark mode support
+
+
 
