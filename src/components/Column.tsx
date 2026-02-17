@@ -4,7 +4,7 @@ export default function Column({ title, type, tasks, dispatch }: any) {
   const columnTasks = tasks.filter((t: any) => t.column === type);
 
   return (
-    <div className="bg-gray-100 p-4 rounded">
+    <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 min-h-62.5">
       <h2 className="font-bold mb-4">{title}</h2>
 
       {columnTasks.length === 0 && (

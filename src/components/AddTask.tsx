@@ -23,26 +23,31 @@ export default function AddTask({ dispatch }: any) {
   };
 
   return (
-    <div>
-  <input
-  id="task-title"
-  name="title"
-  placeholder="Title"
-  className="border p-2 rounded"
-  value={title}
-  onChange={(e) => setTitle(e.target.value)}
-/>
+    <div className="flex gap-3 justify-center mb-8">
+      <input
+        id="task-title"
+        name="title"
+        placeholder="Title"
+        className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
 
-<input
-  id="task-description"
-  name="description"
-  placeholder="Description"
-  className="border p-2 rounded"
-  value={description}
-  onChange={(e) => setDescription(e.target.value)}
-/>
+      <input
+        id="task-description"
+        name="description"
+        placeholder="Description"
+        className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
 
-      <button onClick={add}>Add</button>
+      <button
+        className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
+        onClick={add}
+      >
+        Add
+      </button>
     </div>
   );
 }
