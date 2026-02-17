@@ -109,9 +109,28 @@ This project can be deployed using:
 
 ---
 
+## 🚀 Advanced Interaction Features
+
+- 🔄 Mode Toggle:
+  - Switch between **Normal Mode** (button-based actions) and **Drag & Drop Mode**.
+  - Clean toggle switch implemented in the header for better UX.
+
+- 🖱 Drag & Drop Interaction:
+  - Tasks can be dragged between columns.
+  - Powered by `dnd-kit` for smooth interaction and modern drag behavior.
+
+- 🗑 Delete Drop Zone:
+  - Dedicated delete area appears during drag mode.
+  - Dragging a task into the delete zone removes it instantly.
+
+- 🎯 Enhanced User Experience:
+  - Cursor changes during drag interactions.
+  - Column highlight when hovering during drag.
+  - Responsive and interactive visual feedback.
+
+
 ## 🔮 Possible Future Improvements
 
-- Drag-and-drop support (dnd-kit / react-beautiful-dnd)
 - Task editing functionality
 - Animations for task transitions
 - Dark mode support
