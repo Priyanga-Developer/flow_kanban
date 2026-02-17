@@ -5,6 +5,10 @@ export type Action =
   | { type: "DELETE_TASK"; payload: string }
   | { type: "MOVE_TASK"; payload: { id: string; column: ColumnType } };
 
+   export  const initialState = {
+      tasks: JSON.parse(localStorage.getItem("tasks") || "[]"),
+    };
+
 export const boardReducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "ADD_TASK":
