@@ -1,11 +1,10 @@
 export default function TaskCard({ task, dispatch }: any) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow border border-gray-200 mb-3 flex flex-col justify-center items-center">
+    <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm hover:shadow-md transition">
       <h3 className="font-semibold text-gray-800">{task.title}</h3>
       <p className="text-sm text-gray-600 wrap-break-word">
-  {task.description}
-</p>
-
+        {task.description}
+      </p>
 
       <div className="flex gap-2 mt-2 flex-wrap">
         <button

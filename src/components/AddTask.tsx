@@ -23,7 +23,7 @@ export default function AddTask({ dispatch }: any) {
   };
 
   return (
-    <div className="flex-col flex items-center md:flex-row gap-3 justify-center mb-8">
+<div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8 flex gap-3 justify-center">
       <input
         id="task-title"
         name="title"
