@@ -44,6 +44,16 @@ The application uses `useReducer` to manage task state. This provides:
 - Clear action-driven updates
 - Easy scalability for future features like drag-and-drop
 
+### Interaction Modes
+
+The application supports two interaction modes:
+
+- **Normal Mode** – Traditional button-based task movement.
+- **Drag Mode** – Enables drag-and-drop functionality using dnd-kit.
+
+Mode switching is controlled via global UI state and conditionally enables drag behavior without duplicating component logic.
+
+
 Reducer logic is located in:
 src/reducer/boardReducer.ts
 
