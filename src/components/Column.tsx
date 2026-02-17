@@ -1,7 +1,8 @@
+import type { Task } from "../types/types";
 import TaskCard from "./TaskCard";
 
 export default function Column({ title, type, tasks, dispatch }: any) {
-  const columnTasks = tasks.filter((t: any) => t.column === type);
+  const columnTasks = tasks.filter((t:Task) => t?.column === type);
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 min-h-75">
@@ -12,8 +13,8 @@ export default function Column({ title, type, tasks, dispatch }: any) {
       )}
 
       <div className="space-y-4">
-        {columnTasks.map((task: any) => (
-          <TaskCard key={task.id} task={task} dispatch={dispatch} />
+        {columnTasks.map((task:Task) => (
+          <TaskCard key={task?.id} task={task} dispatch={dispatch} />
         ))}
       </div>
     </div>

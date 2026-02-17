@@ -5,7 +5,7 @@ export default function AddTask({ dispatch }: any) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const add = () => {
+  const handleAddTask = () => {
     if (!title.trim()) return;
 
     dispatch({
@@ -23,7 +23,7 @@ export default function AddTask({ dispatch }: any) {
   };
 
   return (
-<div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8 flex gap-3 justify-center">
+    <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8 flex gap-3 justify-center">
       <input
         id="task-title"
         name="title"
@@ -44,7 +44,7 @@ export default function AddTask({ dispatch }: any) {
 
       <button
         className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition"
-        onClick={add}
+        onClick={handleAddTask}
       >
         Add
       </button>

@@ -1,15 +1,15 @@
 import { useEffect, useReducer } from "react";
-import "./App.css";
 import { boardReducer, initialState } from "./reducer/boardReducer";
 import Board from "./components/Board";
 import Header from "./components/Header";
+import { loadState, saveState } from "./utils/storage";
 
 function App() {
-  const [state, dispatch] = useReducer(boardReducer, initialState);
+  const [state, dispatch] = useReducer(boardReducer, initialState, loadState);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(state?.tasks));
-  }, [state?.tasks]);
+    saveState(state);
+  }, [state]);
 
   return (
     <>

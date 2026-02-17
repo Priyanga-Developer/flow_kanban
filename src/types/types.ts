@@ -10,3 +10,17 @@ export interface Task {
 export interface State {
   tasks: Task[];
 }
+
+type MoveTaskAction = {
+  label: string;
+  type: "MOVE_TASK";
+  column: ColumnType;
+  color: string;
+};
+
+type DeleteTaskAction = Omit<MoveTaskAction, "column" | "type"> & {
+  type: "DELETE_TASK";
+};
+
+export type TaskAction = MoveTaskAction | DeleteTaskAction;
+
